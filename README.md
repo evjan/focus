@@ -7,4 +7,4 @@ Usage
 
     sudo ruby focus.rb
 
-Why sudo? Because it alters your etc/hosts file, that's why.
+Why sudo? Because it alters your /etc/hosts file, that's why.
