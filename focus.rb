@@ -32,15 +32,15 @@ end
 
 start_focus
 
-minute_counter = 1
+minute_counter = 25
 while(true) do
   sleep 60
-  minute_counter += 1
-  if minute_counter >= 25
+  minute_counter -= 1
+  if minute_counter <= 0
     puts "Done!"
     break
   else
-    puts "#{minute_counter} minutes have passed"
+    puts "#{minute_counter} minutes to go"
   end
 end
 
