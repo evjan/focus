@@ -34,14 +34,15 @@ start_focus
 
 minute_counter = 25
 while(true) do
-  sleep 60
-  minute_counter -= 1
   if minute_counter <= 0
     puts "Done!"
     break
   else
     puts "#{minute_counter} minutes to go"
   end
+
+  sleep 60
+  minute_counter -= 1
 end
 
 end_focus
