@@ -31,15 +31,17 @@ def end_focus
 end
 
 start_focus
-start_time = Time.now
+
+minute_counter = 1
 while(true) do
   sleep 60
-  time_diff = (Time.now - start_time)/60
-  if time_diff >= 25
+  minute_counter += 1
+  if minute_counter >= 25
     puts "Done!"
     break
   else
-    puts "#{time_diff} minutes have passed"
+    puts "#{minute_counter} minutes have passed"
   end
 end
+
 end_focus
