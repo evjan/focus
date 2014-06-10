@@ -30,16 +30,16 @@ def end_focus
   end
 end
 
-# start_focus
-# start_time = Time.now
-# while(true) do
-#   sleep 60
-#   time_diff = (Time.now - start_time)/60
-#   if time_diff >= 25
-#     puts "Done!"
-#     break
-#   else
-#     puts "#{time_diff} minutes have passed"
-#   end
-# end
+start_focus
+start_time = Time.now
+while(true) do
+  sleep 60
+  time_diff = (Time.now - start_time)/60
+  if time_diff >= 25
+    puts "Done!"
+    break
+  else
+    puts "#{time_diff} minutes have passed"
+  end
+end
 end_focus
