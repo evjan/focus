@@ -4,7 +4,6 @@ end
 
 def start_focus
   File.open(hosts_file_name, "a") do |f|
-    f.puts("#FOCUS BLOCKS")
     ["news.ycombinator.com", "facebook.com", "twitter.com", "reddit.com", "youtube.com"].each do |domain|
       f.puts("::1  #{domain}  #FOCUS")
       f.puts("::1  www.#{domain}  #FOCUS")
