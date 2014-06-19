@@ -7,6 +7,6 @@ Only tested on OS X.
 Usage
 =====
 
-    sudo ruby focus.rb
+    sudo ./focus.rb
 
-Why sudo? Because it alters your /etc/hosts file, that's why.
+Why sudo? Because it temporarily alters your /etc/hosts file, that's why.

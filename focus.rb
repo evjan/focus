@@ -1,3 +1,5 @@
+#! /usr/bin/ruby
+
 def hosts_file_name
   "/etc/hosts"
 end
