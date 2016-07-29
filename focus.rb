@@ -6,7 +6,7 @@ end
 
 def start_focus
   File.open(hosts_file_name, "a") do |f|
-    ["news.ycombinator.com", "facebook.com", "m.facebook.com", "twitter.com", "reddit.com", "youtube.com"].each do |domain|
+    ["news.ycombinator.com", "facebook.com", "m.facebook.com", "messenger.com", "twitter.com", "reddit.com", "youtube.com"].each do |domain|
       f.puts("::1  #{domain}  #FOCUS")
       f.puts("::1  www.#{domain}  #FOCUS")
       f.puts("127.0.0.1  #{domain}  #FOCUS")
