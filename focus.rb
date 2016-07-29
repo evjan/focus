@@ -13,6 +13,7 @@ def start_focus
       f.puts("127.0.0.1  www.#{domain}  #FOCUS")
     end
   end
+  `notify-send Pomodoro started`
 end
 
 def end_focus
@@ -36,6 +37,7 @@ start_focus
 minute_counter = 25
 while(true) do
   if minute_counter <= 0
+    `notify-send Pomodoro done!`
     puts "Done!"
     break
   else
