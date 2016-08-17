@@ -38,10 +38,11 @@ minute_counter = 25
 while(true) do
   if minute_counter <= 0
     `notify-send Pomodoro done!`
-    puts "Done!"
+    puts "Done!                            "
     break
   else
-    puts "#{minute_counter} minutes to go"
+    print "#{minute_counter} minutes to go "
+    print 13.chr
   end
 
   sleep 60
