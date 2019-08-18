@@ -6,14 +6,14 @@ end
 
 def start_focus
   File.open(hosts_file_name, "a") do |f|
-    ["news.ycombinator.com", "facebook.com", "m.facebook.com", "messenger.com", "twitter.com", "reddit.com", "youtube.com"].each do |domain|
+    ["news.ycombinator.com", "facebook.com", "m.facebook.com", "messenger.com", "youtube.com"].each do |domain|
       f.puts("::1  #{domain}  #FOCUS")
       f.puts("::1  www.#{domain}  #FOCUS")
       f.puts("127.0.0.1  #{domain}  #FOCUS")
       f.puts("127.0.0.1  www.#{domain}  #FOCUS")
     end
   end
-  `notify-send Pomodoro started`
+  puts 'Started'
 end
 
 def end_focus
@@ -34,14 +34,13 @@ end
 
 start_focus
 
-minute_counter = 25
+minute_counter = 50
 while(true) do
   if minute_counter <= 0
-    `notify-send Pomodoro done!`
-    puts "Done!                            "
+    puts "Done!                                "
     break
   else
-    print "#{minute_counter} minutes to go "
+    print "Time left: #{minute_counter} minutes"
     print 13.chr
   end
 
